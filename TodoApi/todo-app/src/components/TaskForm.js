@@ -47,7 +47,7 @@ const TaskForm = ({ onSubmit, initialValues }) => {
                 max="5"
                 required
             />
-            <select value={status} onChange={handleStatusChange} disabled={initialValues.status === 2}>
+            <select value={status} onChange={handleStatusChange}>
                 <option value="0">Initial</option>
                 <option value="1">In Progress</option>
                 <option value="2">Completed</option>
@@ -64,4 +64,3 @@ TaskForm.defaultProps = {
 };
 
 export default TaskForm;
-
