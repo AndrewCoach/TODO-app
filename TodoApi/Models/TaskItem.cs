@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace TodoApi.Models
 {
@@ -18,6 +19,7 @@ namespace TodoApi.Models
         public int Priority { get; set; }
 
         [Required]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public TaskStatus Status { get; set; }
     }
 
